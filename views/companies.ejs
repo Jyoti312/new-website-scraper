@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saved Companies</title>
+</head>
+<body>
+  <h1>Saved Companies</h1>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Logo</th>
+        <th>Facebook</th>
+        <th>LinkedIn</th>
+        <th>Twitter</th>
+        <th>Instagram</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Website</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% companies.forEach(company => { %>
+        <tr>
+          <td><%= company.name %></td>
+          <td><%= company.description %></td>
+          <td><img src="<%= company.logo %>" alt="Logo" width="50"></td>
+          <td><a href="<%= company.facebook %>">Facebook</a></td>
+          <td><a href="<%= company.linkedin %>">LinkedIn</a></td>
+          <td><a href="<%= company.twitter %>">Twitter</a></td>
+          <td><a href="<%= company.instagram %>">Instagram</a></td>
+          <td><%= company.address %></td>
+          <td><%= company.phone %></td>
+          <td><%= company.email %></td>
+          <td><a href="<%= company.website %>">Website</a></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>
